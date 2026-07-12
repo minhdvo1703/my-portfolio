@@ -5,6 +5,15 @@ const SCHOOLS = [
     degree: 'M.S. in Applied Data Science',
     period: '2023 – 2024',
     accent: 'bg-accent/20',
+    coursework: [
+      'Data Engineering',
+      'Machine Learning',
+      'Deep Learning',
+      'NLP & Text Analytics',
+      'Time Series',
+      'Big Data (PySpark)',
+      'Applied Statistics',
+    ],
   },
   {
     id: 2,
@@ -12,6 +21,14 @@ const SCHOOLS = [
     degree: 'B.S. in Business Analytics and Information Systems',
     period: '2019 – 2022',
     accent: 'bg-accent/15',
+    coursework: [
+      'Database Management',
+      'Business Intelligence',
+      'Data Visualization',
+      'Statistics',
+      'Information Systems',
+      'Business Analytics',
+    ],
   },
 ]
 
@@ -34,11 +51,14 @@ function EduCard({ school }) {
         <p className="font-sans text-[13px] text-text-muted">
           {school.period}
         </p>
-        <div className="pt-3">
-          <span className="font-sans text-[11px] font-medium text-accent-dark bg-accent-light
-            px-2.5 py-0.5 rounded-full">
-            [Coursework coming soon]
-          </span>
+        <div className="pt-3 flex flex-wrap gap-1.5">
+          {school.coursework.map(c => (
+            <span key={c}
+              className="font-sans text-[11px] font-medium text-accent-dark bg-accent-light
+                px-2.5 py-0.5 rounded-full">
+              {c}
+            </span>
+          ))}
         </div>
       </div>
     </div>
