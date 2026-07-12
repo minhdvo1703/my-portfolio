@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans:  'Rethink Sans', sans-serif;
+  --font-serif: 'Hedvig Letters Serif', serif;
+  --hero-gradient: radial-gradient(ellipse at 65% 40%, #B8DDEF 0%, #DAEEF8 45%, #FAFCFF 75%);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 68px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #FAFCFF;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
