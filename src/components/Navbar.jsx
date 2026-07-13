@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const NAV_LINKS = [
   { label: 'About',      href: '#hero' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Skills',     href: '#skills' },
+  // { label: 'Skills',     href: '#skills' },  // temporarily hidden
   { label: 'Projects',   href: '#projects' },
   { label: 'Education',  href: '#education' },
   // { label: 'Hobbies', href: '#hobbies' },  // temporarily hidden
@@ -14,7 +14,7 @@ export default function Navbar() {
   const [menuOpen, setMenu] = useState(false)
 
   useEffect(() => {
-    const sectionIds = ['hero', 'experience', 'skills', 'projects', 'education']
+    const sectionIds = ['hero', 'experience', 'projects', 'education']
     const observers = sectionIds.map(id => {
       const el = document.getElementById(id)
       if (!el) return null

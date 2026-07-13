@@ -56,13 +56,12 @@ export default function Hero() {
           {/* RIGHT column — 150ms delay */}
           <div className="fade-up md:basis-2/5 flex justify-center md:justify-end"
             style={{ transitionDelay: '150ms' }}>
-            <div className="w-56 h-56 md:w-72 md:h-72 rounded-full bg-accent-light
-              flex items-center justify-center flex-shrink-0">
-              <span className="font-sans font-normal text-accent-dark"
-                style={{ fontSize: '44px' }}>
-                MV
-              </span>
-            </div>
+            <img
+              src="/my-portfolio/assets/profile.jpg"
+              alt="Minh Vo"
+              className="rounded-full w-64 h-64 object-cover object-top flex-shrink-0"
+              style={{ border: '3px solid #4DA8DA' }}
+            />
           </div>
 
         </div>

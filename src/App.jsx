@@ -15,7 +15,8 @@ export default function App() {
       <main>
         <Hero />
         <Experience />
-        <Skills />
+        {/* <Skills /> */}
+        {/* temporarily hidden */}
         <Projects />
         <Education />
         <Contact />

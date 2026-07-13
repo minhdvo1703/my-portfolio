@@ -4,7 +4,7 @@ const SOCIAL = [
   { Icon: FaLinkedin, href: 'https://www.linkedin.com/in/minhvo-0317/', label: 'LinkedIn' },
   { Icon: FaGithub,   href: 'https://github.com/minhdvo1703',           label: 'GitHub' },
   { Icon: FaEnvelope, href: 'mailto:minhdvo0317@gmail.com',             label: 'Email' },
-  { Icon: FaFileAlt,  href: '#',                                        label: 'Resume' },
+  { Icon: FaFileAlt,  href: '/my-portfolio/assets/Minh_Vo_resume_BIA.pdf', label: 'Resume', external: true },
 ]
 
 export default function Footer() {
@@ -14,11 +14,11 @@ export default function Footer() {
 
         {/* Social icons */}
         <div className="flex items-center gap-6">
-          {SOCIAL.map(({ Icon, href, label }) => (
+          {SOCIAL.map(({ Icon, href, label, external }) => (
             <a key={label}
               href={href}
-              target={href.startsWith('http') ? '_blank' : undefined}
-              rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              target={(href.startsWith('http') || external) ? '_blank' : undefined}
+              rel={(href.startsWith('http') || external) ? 'noopener noreferrer' : undefined}
               aria-label={label}
               className="transition-colors duration-200"
               style={{ color: '#B8DDEF' }}
