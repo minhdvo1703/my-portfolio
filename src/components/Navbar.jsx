@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react'
 
 const NAV_LINKS = [
-  { label: 'About',     href: '#hero' },
-  { label: 'Projects',  href: '#projects' },
-  { label: 'Education', href: '#education' },
+  { label: 'About',      href: '#hero' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills',     href: '#skills' },
+  { label: 'Projects',   href: '#projects' },
+  { label: 'Education',  href: '#education' },
   // { label: 'Hobbies', href: '#hobbies' },  // temporarily hidden
 ]
 
 export default function Navbar() {
-  const [active, setActive]   = useState('hero')
-  const [menuOpen, setMenu]   = useState(false)
+  const [active, setActive] = useState('hero')
+  const [menuOpen, setMenu] = useState(false)
 
   useEffect(() => {
-    const sectionIds = ['hero', 'projects', 'education', 'hobbies']
+    const sectionIds = ['hero', 'experience', 'skills', 'projects', 'education']
     const observers = sectionIds.map(id => {
       const el = document.getElementById(id)
       if (!el) return null
@@ -47,7 +49,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
+          <ul className="hidden md:flex items-center gap-6 list-none m-0 p-0">
             {NAV_LINKS.map(({ label, href }) => {
               const id = href.replace('#', '')
               const isActive = active === id
@@ -81,7 +83,7 @@ export default function Navbar() {
 
       {/* Mobile overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-bg-base flex flex-col items-center justify-center gap-10 md:hidden">
+        <div className="fixed inset-0 z-40 bg-bg-base flex flex-col items-center justify-center gap-8 md:hidden">
           {NAV_LINKS.map(({ label, href }) => (
             <a key={label} href={href}
               onClick={e => handleLink(e, href)}
