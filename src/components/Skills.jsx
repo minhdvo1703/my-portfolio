@@ -1,10 +1,12 @@
 import skills from '../data/skills'
+import useScrollReveal from '../hooks/useScrollReveal'
 
 export default function Skills() {
   const categories = Object.entries(skills)
+  const ref = useScrollReveal()
 
   return (
-    <section id="skills" className="py-24"
+    <section id="skills" className="py-24" ref={ref}
       style={{ background: 'rgba(184,221,239,0.12)' }}>
       <div className="max-w-6xl mx-auto px-6">
 
@@ -17,9 +19,11 @@ export default function Skills() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {categories.map(([category, items]) => (
-            <div key={category}
-              className="bg-surface border border-border-subtle rounded-xl p-5 space-y-3">
+          {categories.map(([category, items], i) => (
+            <div
+              key={category}
+              className="fade-up bg-surface border border-border-subtle rounded-xl p-5 space-y-3"
+              style={{ transitionDelay: `${i * 80}ms` }}>
 
               <p className="font-sans text-[11px] font-semibold text-accent uppercase"
                 style={{ letterSpacing: '0.08em' }}>
