@@ -2,7 +2,7 @@ import Navbar    from './components/Navbar'
 import Hero      from './components/Hero'
 import Projects  from './components/Projects'
 import Education from './components/Education'
-import Hobbies   from './components/Hobbies'
+// import Hobbies   from './components/Hobbies'
 import Footer    from './components/Footer'
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
         <Hero />
         <Projects />
         <Education />
-        <Hobbies />
+        {/* <Hobbies /> */}
       </main>
       <Footer />
     </>

@@ -4,7 +4,7 @@ const NAV_LINKS = [
   { label: 'About',     href: '#hero' },
   { label: 'Projects',  href: '#projects' },
   { label: 'Education', href: '#education' },
-  { label: 'Hobbies',   href: '#hobbies' },
+  // { label: 'Hobbies', href: '#hobbies' },  // temporarily hidden
 ]
 
 export default function Navbar() {

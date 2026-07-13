@@ -1,5 +1,5 @@
 const TECH_BADGES = [
-  'Python','SQL','Tableau','Power BI','R','PySpark','Excel','BigQuery','NLP',
+  'Business Intelligence','Data Analytics','SQL','Tableau','Power BI','Python','Excel',
 ]
 
 export default function Hero() {
@@ -28,13 +28,8 @@ export default function Hero() {
             <p className="font-sans text-[17px] text-text-muted"
               style={{ lineHeight: '1.3' }}>
               Hi, I'm Minh — you can call me Claire. I'm a data scientist and analytics
-              professional from Vietnam, based in Houston, TX. I hold an M.S. in Applied
-              Data Science from the University of Chicago and a B.S. in Business Analytics
-              from the University of South Florida. Currently at O'Connor &amp; Associates,
-              I analyze commercial property portfolios at scale and build Power BI
-              dashboards that track tax reduction outcomes across a $700M asset base.
-              I build pipelines, models, and dashboards that help teams move faster and
-              decide smarter.
+              professional from Vietnam, based in Houston, TX. I build pipelines, models,
+              and dashboards that help teams move faster and decide smarter.
             </p>
 
             {/* CTAs */}
