@@ -1,4 +1,4 @@
-import experience from '../data/experience'
+import { experience } from '../data/experience'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 export default function Experience() {
@@ -8,9 +8,6 @@ export default function Experience() {
     <section id="experience" className="py-24 bg-bg-base" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <p className="font-sans text-[12px] font-semibold text-accent uppercase tracking-[0.1em] mb-2">
-          Background
-        </p>
         <h2 className="font-sans text-3xl md:text-4xl font-bold text-text-base mb-12"
           style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Experience
@@ -26,7 +23,7 @@ export default function Experience() {
           <div className="space-y-10">
             {experience.map((job, i) => (
               <div
-                key={job.id}
+                key={job.company}
                 className="fade-up flex items-start"
                 style={{ transitionDelay: `${i * 100}ms` }}>
 
@@ -47,10 +44,10 @@ export default function Experience() {
                     {job.company}
                   </p>
                   <p className="font-sans text-sm text-text-muted mt-0.5 mb-3">
-                    {job.title}{job.location ? ` · ${job.location}` : ''}
+                    {job.role}{job.location ? ` · ${job.location}` : ''}
                   </p>
                   <div className="space-y-1.5">
-                    {job.bullets.slice(0, 2).map((bullet, j) => (
+                    {job.highlights.slice(0, 2).map((bullet, j) => (
                       <p key={j} className="font-sans text-[13px] text-text-muted"
                         style={{ lineHeight: '1.5' }}>
                         — {bullet}
