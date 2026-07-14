@@ -17,8 +17,8 @@ export default {
         'border-subtle': '#E2EAF0',
       },
       fontFamily: {
-        sans:  ['"Inter"', 'system-ui', 'sans-serif'],
-        serif: ['"Manrope"', 'system-ui', 'sans-serif'],  /* repurposed as display/heading */
+        sans:  ['"Rethink Sans"', 'sans-serif'],
+        serif: ['"Hedvig Letters Serif"', 'serif'],
       },
     },
   },

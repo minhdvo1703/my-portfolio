@@ -4,23 +4,23 @@ import useScrollReveal from '../hooks/useScrollReveal'
 
 function ProjectCard({ project, delay }) {
   return (
+    // fade-up wrapper keeps the card's own transition-all isolated
     <div className="fade-up" style={{ transitionDelay: `${delay}ms` }}>
-      <div className="bg-surface border border-border-subtle rounded-xl p-6 md:p-8 flex flex-col gap-4 h-full
+      <div className="bg-surface border border-border-subtle rounded-xl p-6 flex flex-col gap-4 h-full
         hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(77,168,218,0.15)]
         transition-[transform,box-shadow] duration-200 cursor-default">
 
-        {/* Gradient header strip — negative margin matches card padding */}
+        {/* Gradient header strip */}
         <div
-          className="h-4 -mx-6 -mt-6 md:-mx-8 md:-mt-8 rounded-t-xl"
+          className="h-4 -mx-6 -mt-6 rounded-t-xl"
           style={{ background: project.accentGradient }}
         />
 
-        <h3 className="font-serif text-[17px] font-bold text-text-base leading-snug">
+        <h3 className="font-sans text-base font-semibold text-text-base leading-snug">
           {project.title}
         </h3>
 
-        <p className="font-sans text-[16px] text-text-muted flex-1"
-          style={{ lineHeight: '1.7', maxWidth: '70ch' }}>
+        <p className="font-sans text-sm text-text-muted flex-1" style={{ lineHeight: '1.3' }}>
           {project.description}
         </p>
 
@@ -56,12 +56,8 @@ export default function Projects() {
     <section id="projects" className="py-24 bg-bg-base" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="font-serif font-bold text-text-base mb-12"
-          style={{
-            fontSize: 'clamp(2rem, calc(1.25rem + 2.5vw), 3rem)',
-            lineHeight: '1.15',
-            letterSpacing: '-0.01em',
-          }}>
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-text-base mb-12"
+          style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Projects
         </h2>
 

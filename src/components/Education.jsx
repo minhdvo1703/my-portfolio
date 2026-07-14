@@ -29,6 +29,7 @@ const SCHOOLS = [
 
 function EduCard({ school, delay }) {
   return (
+    // fade-up wrapper isolates card's own transition-all
     <div className="fade-up" style={{ transitionDelay: `${delay}ms` }}>
       <div className="bg-surface border border-border-subtle rounded-xl overflow-hidden h-full
         hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(77,168,218,0.15)]
@@ -36,15 +37,15 @@ function EduCard({ school, delay }) {
 
         <div className={`h-4 w-full ${school.accent}`} />
 
-        <div className="p-6 md:p-8 space-y-2">
-          <h3 className="font-serif text-[19px] font-bold text-text-base" style={{ lineHeight: '1.2' }}>
+        <div className="p-6 space-y-2">
+          <h3 className="font-sans text-lg font-semibold text-text-base" style={{ lineHeight: '1.2' }}>
             {school.name}
           </h3>
-          <p className="font-sans text-[15px] text-text-base">
+          <p className="font-serif text-sm text-text-base" style={{ fontStyle: 'normal' }}>
             {school.degree}
           </p>
-          <p className="font-sans text-[14px] text-text-muted">{school.gpa}</p>
-          <p className="font-sans text-[14px] text-text-muted">{school.period}</p>
+          <p className="font-sans text-[13px] text-text-muted">{school.gpa}</p>
+          <p className="font-sans text-[13px] text-text-muted">{school.period}</p>
           <div className="pt-3 flex flex-wrap gap-1.5">
             {school.coursework.map(c => (
               <span key={c}
@@ -67,12 +68,8 @@ export default function Education() {
     <section id="education" className="py-24" ref={ref} style={{ background: '#FAFCFF' }}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="font-serif font-bold text-text-base mb-12"
-          style={{
-            fontSize: 'clamp(2rem, calc(1.25rem + 2.5vw), 3rem)',
-            lineHeight: '1.15',
-            letterSpacing: '-0.01em',
-          }}>
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-text-base mb-12"
+          style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Education
         </h2>
 
