@@ -18,25 +18,23 @@ export default function Hero() {
 
           {/* LEFT column — individual margins instead of uniform space-y */}
           <div className="fade-up flex-1 md:basis-3/5">
-            <p className="font-sans text-[13px] font-semibold text-accent uppercase tracking-[0.1em] mb-0">
-              Data Science · Analytics · Business Intelligence
-            </p>
-
-            {/* 16px gap between eyebrow and h1 */}
             <h1 className="font-serif text-text-base"
               style={{
                 fontSize: 'clamp(2.5rem, 6vw, 80px)',
                 lineHeight: '1.05',
                 letterSpacing: '-0.02em',
-                marginTop: '16px',
                 marginBottom: 0,
               }}>
-              Turning data into decisions.
+              Minh Vo
             </h1>
 
-            {/* 24px gap between h1 and bio */}
+            <p className="font-sans font-semibold mb-0"
+              style={{ fontSize: '16px', marginTop: '14px', color: '#1B4F72' }}>
+              Business Intelligence · Data Analytics · Finance Analytics
+            </p>
+
             <p className="font-sans text-[18px] text-text-muted mb-0"
-              style={{ lineHeight: '1.7', marginTop: '24px' }}>
+              style={{ lineHeight: '1.7', marginTop: '22px' }}>
               Hi, I'm Minh — you can call me Claire. I'm a data scientist and analytics
               professional from Vietnam, based in Houston, TX. I build pipelines, models,
               and dashboards that help teams move faster and decide smarter.
