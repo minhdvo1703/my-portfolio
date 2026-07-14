@@ -18,7 +18,7 @@ export default function Contact() {
         {/* mt-3 → mt-4 */}
         <p
           className="fade-up font-sans text-text-muted mt-4"
-          style={{ fontSize: '17px', lineHeight: '1.7', transitionDelay: '80ms' }}>
+          style={{ fontSize: '18px', lineHeight: '1.7', transitionDelay: '80ms' }}>
           Open to analytics, BI, and data science opportunities.
         </p>
 

@@ -40,15 +40,15 @@ function EduCard({ school, delay }) {
           <h3 className="font-sans text-lg font-semibold text-text-base" style={{ lineHeight: '1.2' }}>
             {school.name}
           </h3>
-          <p className="font-serif text-sm text-text-base mb-0" style={{ fontStyle: 'normal' }}>
+          <p className="font-serif text-[16px] text-text-base mb-0" style={{ fontStyle: 'normal' }}>
             {school.degree}
           </p>
-          <p className="font-sans text-[13px] text-text-muted mb-0">{school.gpa}</p>
-          <p className="font-sans text-[13px] text-text-muted mb-0">{school.period}</p>
+          <p className="font-sans text-[15px] text-text-muted mb-0">{school.gpa}</p>
+          <p className="font-sans text-[15px] text-text-muted mb-0">{school.period}</p>
           <div className="pt-2 flex flex-wrap gap-1.5">
             {school.coursework.map(c => (
               <span key={c}
-                className="font-sans text-[13px] font-medium text-accent-dark bg-accent-light
+                className="font-sans text-[14px] font-medium text-accent-dark bg-accent-light
                   px-2.5 py-1.5 rounded-full">
                 {c}
               </span>
