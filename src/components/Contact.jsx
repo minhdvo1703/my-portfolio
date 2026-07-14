@@ -4,8 +4,9 @@ export default function Contact() {
   const ref = useScrollReveal()
 
   return (
+    /* py-20 → py-14 */
     <section id="contact" ref={ref}
-      className="py-20 text-center"
+      className="py-14 text-center"
       style={{ background: 'rgba(184, 221, 239, 0.08)' }}>
       <div className="max-w-2xl mx-auto px-6">
 
@@ -15,14 +16,16 @@ export default function Contact() {
           Let's talk
         </h2>
 
+        {/* mt-3 → mt-4 */}
         <p
-          className="fade-up font-sans text-text-muted mt-3"
+          className="fade-up font-sans text-text-muted mt-4"
           style={{ fontSize: '16px', lineHeight: '1.3', transitionDelay: '80ms' }}>
           Open to analytics, BI, and data science opportunities.
         </p>
 
+        {/* mt-8 → mt-6 */}
         <div
-          className="fade-up flex justify-center flex-wrap gap-4 mt-8"
+          className="fade-up flex justify-center flex-wrap gap-4 mt-6"
           style={{ transitionDelay: '160ms' }}>
           <a
             href="mailto:minhdvo0317@gmail.com"

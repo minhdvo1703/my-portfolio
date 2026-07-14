@@ -5,19 +5,20 @@ const TECH_BADGES = [
 ]
 
 export default function Hero() {
-  const ref = useScrollReveal(0.05) // lower threshold — hero is full-height
+  const ref = useScrollReveal(0.05)
 
   return (
     <section id="hero" ref={ref}
       className="min-h-screen flex flex-col justify-center pt-16"
       style={{ background: 'var(--hero-gradient)' }}>
-      <div className="max-w-6xl mx-auto px-6 py-20 w-full">
+      {/* py-20 → py-12: section already centers via justify-center; padding is safety margin only */}
+      <div className="max-w-6xl mx-auto px-6 py-12 w-full">
 
-        {/* Two-column layout */}
-        <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+        {/* gap-12 md:gap-16 → gap-8 md:gap-12 */}
+        <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
 
-          {/* LEFT column — no delay */}
-          <div className="fade-up flex-1 md:basis-3/5 space-y-6">
+          {/* LEFT column — space-y-6 → space-y-5 */}
+          <div className="fade-up flex-1 md:basis-3/5 space-y-5">
             <p className="font-sans text-[13px] font-semibold text-accent uppercase tracking-[0.1em]">
               Data Science · Analytics · Business Intelligence
             </p>
@@ -54,7 +55,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT column — 150ms delay */}
+          {/* RIGHT column */}
           <div className="fade-up md:basis-2/5 flex justify-center md:justify-end"
             style={{ transitionDelay: '150ms' }}>
             <img
@@ -67,8 +68,8 @@ export default function Hero() {
 
         </div>
 
-        {/* Tech badges band */}
-        <div className="mt-16 flex flex-wrap gap-2">
+        {/* Tech badges — mt-16 → mt-10 */}
+        <div className="mt-10 flex flex-wrap gap-2">
           {TECH_BADGES.map(tech => (
             <span key={tech}
               className="font-sans text-[12px] font-medium text-accent-dark bg-accent-light
