@@ -56,15 +56,12 @@ export default function Projects() {
     <section id="projects" className="py-24 bg-bg-base" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <p className="font-sans text-[12px] font-semibold text-accent uppercase tracking-[0.1em] mb-2">
-          Work
-        </p>
-        <h2 className="font-sans text-3xl md:text-4xl font-bold text-text-base mb-12"
+        <h2 className="font-sans text-6xl md:text-7xl font-bold text-text-base mb-12"
           style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Projects
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {projects.map((p, i) => (
             <ProjectCard key={p.id} project={p} delay={i * 80} />
           ))}

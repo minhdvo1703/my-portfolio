@@ -26,7 +26,7 @@ const projects = [
     title: 'Twitter Education Analysis — Big Data',
     description:
       'Analyzed 100M tweets (500GB) with PySpark to identify influential voices in education, surface hot topics by geography and timeline, and detect duplication patterns in education-related content.',
-    tags: ['Python', 'PySpark', 'Big Data', 'NLP', 'Twitter API'],
+    tags: ['Python', 'PySpark', 'Big Data', 'Twitter API'],
     accentGradient: 'linear-gradient(135deg, #EEF2FF, #C7D2FE)',
     github: 'https://github.com/minhdvo1703/twitterer-edu',
     slides: 'https://bit.ly/bdp-twitter-edu',
