@@ -12,6 +12,16 @@ export default function Footer() {
     <footer className="py-10" style={{ background: '#0F172A' }}>
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-5">
 
+        {/* Back to top */}
+        <button
+          onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}
+          className="font-sans transition-colors duration-200"
+          style={{ fontSize: '12px', color: '#94A3B8', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+          onMouseEnter={e => (e.currentTarget.style.color = '#B8DDEF')}
+          onMouseLeave={e => (e.currentTarget.style.color = '#94A3B8')}>
+          Back to top ↑
+        </button>
+
         {/* Social icons */}
         <div className="flex items-center gap-6">
           {SOCIAL.map(({ Icon, href, label, external }) => (

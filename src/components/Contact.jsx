@@ -4,22 +4,21 @@ export default function Contact() {
   const ref = useScrollReveal()
 
   return (
-    /* py-20 → py-14 */
     <section id="contact" ref={ref}
-      className="py-14 text-center"
+      className="py-24 text-center"
       style={{ background: 'rgba(184, 221, 239, 0.08)' }}>
       <div className="max-w-2xl mx-auto px-6">
 
         <h2
           className="fade-up font-serif text-text-base"
-          style={{ fontSize: '40px', lineHeight: '1', letterSpacing: '-0.02em' }}>
+          style={{ fontSize: '40px', lineHeight: '1.1', letterSpacing: '-0.02em' }}>
           Let's talk
         </h2>
 
         {/* mt-3 → mt-4 */}
         <p
           className="fade-up font-sans text-text-muted mt-4"
-          style={{ fontSize: '16px', lineHeight: '1.3', transitionDelay: '80ms' }}>
+          style={{ fontSize: '17px', lineHeight: '1.7', transitionDelay: '80ms' }}>
           Open to analytics, BI, and data science opportunities.
         </p>
 

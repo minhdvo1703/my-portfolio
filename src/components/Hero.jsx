@@ -11,31 +11,39 @@ export default function Hero() {
     <section id="hero" ref={ref}
       className="min-h-screen flex flex-col justify-center pt-16"
       style={{ background: 'var(--hero-gradient)' }}>
-      {/* py-20 → py-12: section already centers via justify-center; padding is safety margin only */}
-      <div className="max-w-6xl mx-auto px-6 py-12 w-full">
+      {/* py-12 → py-24 (~102px with 17px base) */}
+      <div className="max-w-6xl mx-auto px-6 py-24 w-full">
 
-        {/* gap-12 md:gap-16 → gap-8 md:gap-12 */}
         <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
 
-          {/* LEFT column — space-y-6 → space-y-5 */}
-          <div className="fade-up flex-1 md:basis-3/5 space-y-5">
-            <p className="font-sans text-[13px] font-semibold text-accent uppercase tracking-[0.1em]">
+          {/* LEFT column — individual margins instead of uniform space-y */}
+          <div className="fade-up flex-1 md:basis-3/5">
+            <p className="font-sans text-[13px] font-semibold text-accent uppercase tracking-[0.1em] mb-0">
               Data Science · Analytics · Business Intelligence
             </p>
 
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-text-base"
-              style={{ lineHeight: '1', letterSpacing: '-0.02em' }}>
+            {/* 16px gap between eyebrow and h1 */}
+            <h1 className="font-serif text-text-base"
+              style={{
+                fontSize: 'clamp(2.5rem, 6vw, 80px)',
+                lineHeight: '1.05',
+                letterSpacing: '-0.02em',
+                marginTop: '16px',
+                marginBottom: 0,
+              }}>
               Turning data into decisions.
             </h1>
 
-            <p className="font-sans text-[17px] text-text-muted"
-              style={{ lineHeight: '1.3' }}>
+            {/* 24px gap between h1 and bio */}
+            <p className="font-sans text-[18px] text-text-muted mb-0"
+              style={{ lineHeight: '1.7', marginTop: '24px' }}>
               Hi, I'm Minh — you can call me Claire. I'm a data scientist and analytics
               professional from Vietnam, based in Houston, TX. I build pipelines, models,
               and dashboards that help teams move faster and decide smarter.
             </p>
 
-            <div className="flex flex-wrap gap-3 pt-1">
+            {/* 32px gap between bio and CTA buttons */}
+            <div className="flex flex-wrap gap-3" style={{ marginTop: '32px' }}>
               <a href="#projects"
                 onClick={e => {
                   e.preventDefault()
@@ -68,12 +76,12 @@ export default function Hero() {
 
         </div>
 
-        {/* Tech badges — mt-16 → mt-10 */}
+        {/* Tech badges */}
         <div className="mt-10 flex flex-wrap gap-2">
           {TECH_BADGES.map(tech => (
             <span key={tech}
-              className="font-sans text-[12px] font-medium text-accent-dark bg-accent-light
-                px-3 py-1 rounded-full">
+              className="font-sans text-[13px] font-medium text-accent-dark bg-accent-light
+                px-3 py-1.5 rounded-full">
               {tech}
             </span>
           ))}
