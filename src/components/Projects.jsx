@@ -15,11 +15,11 @@ function ProjectCard({ project, delay }) {
           style={{ background: project.accentGradient }}
         />
 
-        <h3 className="font-sans text-base font-semibold text-text-base leading-snug">
+        <h3 className="font-sans text-[18px] font-semibold text-text-base leading-snug">
           {project.title}
         </h3>
 
-        <p className="font-sans text-[15px] text-text-muted flex-1"
+        <p className="font-sans text-[17px] text-text-muted flex-1"
           style={{ lineHeight: '1.65', marginBottom: '4px' }}>
           {project.description}
         </p>
@@ -27,7 +27,7 @@ function ProjectCard({ project, delay }) {
         <div className="flex flex-wrap gap-1.5">
           {project.tags.map(tag => (
             <span key={tag}
-              className="font-sans text-[13px] font-medium text-accent-dark bg-accent-light
+              className="font-sans text-[14px] font-medium text-accent-dark bg-accent-light
                 px-2.5 py-1.5 rounded-full">
               {tag}
             </span>
