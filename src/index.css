@@ -9,6 +9,7 @@
 }
 
 html {
+  font-size: 17px;
   scroll-behavior: smooth;
   scroll-padding-top: 68px;
 }
@@ -16,11 +17,15 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
+  line-height: 1.65;
   background-color: #FAFCFF;
   color: #0F172A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+p { margin-bottom: 1.25rem; line-height: 1.7; }
+li { line-height: 1.7; margin-bottom: 0.4rem; }
 
 /* ── Scroll fade-in-up animation ─────────────────────────────────────── */
 .fade-up {

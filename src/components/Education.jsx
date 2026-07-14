@@ -36,22 +36,20 @@ function EduCard({ school, delay }) {
 
         <div className={`h-4 w-full ${school.accent}`} />
 
-        {/* space-y-2 → space-y-2.5 inside card */}
-        <div className="p-6 space-y-2.5">
+        <div className="p-8 space-y-2.5">
           <h3 className="font-sans text-lg font-semibold text-text-base" style={{ lineHeight: '1.2' }}>
             {school.name}
           </h3>
-          <p className="font-serif text-sm text-text-base" style={{ fontStyle: 'normal' }}>
+          <p className="font-serif text-sm text-text-base mb-0" style={{ fontStyle: 'normal' }}>
             {school.degree}
           </p>
-          <p className="font-sans text-[13px] text-text-muted">{school.gpa}</p>
-          <p className="font-sans text-[13px] text-text-muted">{school.period}</p>
-          {/* pt-3 → pt-2 */}
+          <p className="font-sans text-[13px] text-text-muted mb-0">{school.gpa}</p>
+          <p className="font-sans text-[13px] text-text-muted mb-0">{school.period}</p>
           <div className="pt-2 flex flex-wrap gap-1.5">
             {school.coursework.map(c => (
               <span key={c}
-                className="font-sans text-[11px] font-medium text-accent-dark bg-accent-light
-                  px-2.5 py-0.5 rounded-full">
+                className="font-sans text-[13px] font-medium text-accent-dark bg-accent-light
+                  px-2.5 py-1.5 rounded-full">
                 {c}
               </span>
             ))}
@@ -66,8 +64,7 @@ export default function Education() {
   const ref = useScrollReveal()
 
   return (
-    /* py-24 → py-16 */
-    <section id="education" className="py-16" ref={ref} style={{ background: '#FAFCFF' }}>
+    <section id="education" className="py-24" ref={ref} style={{ background: '#FFFFFF' }}>
       <div className="max-w-6xl mx-auto px-6">
 
         {/* mb-12 → mb-8 */}

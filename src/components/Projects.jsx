@@ -6,12 +6,12 @@ function ProjectCard({ project, delay }) {
   return (
     <div className="fade-up" style={{ transitionDelay: `${delay}ms` }}>
       {/* gap-4 → gap-3: tighter between related card elements */}
-      <div className="bg-surface border border-border-subtle rounded-xl p-6 flex flex-col gap-3 h-full
+      <div className="bg-surface border border-border-subtle rounded-xl p-8 flex flex-col gap-3 h-full
         hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(77,168,218,0.15)]
         transition-[transform,box-shadow] duration-200 cursor-default">
 
         <div
-          className="h-4 -mx-6 -mt-6 rounded-t-xl"
+          className="h-4 -mx-8 -mt-8 rounded-t-xl"
           style={{ background: project.accentGradient }}
         />
 
@@ -19,15 +19,16 @@ function ProjectCard({ project, delay }) {
           {project.title}
         </h3>
 
-        <p className="font-sans text-sm text-text-muted flex-1" style={{ lineHeight: '1.3' }}>
+        <p className="font-sans text-[15px] text-text-muted flex-1"
+          style={{ lineHeight: '1.65', marginBottom: '4px' }}>
           {project.description}
         </p>
 
         <div className="flex flex-wrap gap-1.5">
           {project.tags.map(tag => (
             <span key={tag}
-              className="font-sans text-[11px] font-medium text-accent-dark bg-accent-light
-                px-2.5 py-0.5 rounded-full">
+              className="font-sans text-[13px] font-medium text-accent-dark bg-accent-light
+                px-2.5 py-1.5 rounded-full">
               {tag}
             </span>
           ))}
@@ -52,8 +53,7 @@ export default function Projects() {
   const ref = useScrollReveal()
 
   return (
-    /* py-24 → py-16 */
-    <section id="projects" className="py-16 bg-bg-base" ref={ref}>
+    <section id="projects" className="py-24" ref={ref} style={{ background: '#F5F9FF' }}>
       <div className="max-w-6xl mx-auto px-6">
 
         {/* mb-12 → mb-8 */}

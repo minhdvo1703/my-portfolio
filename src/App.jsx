@@ -14,13 +14,14 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <hr style={{ border: 'none', borderTop: '1px solid #E2EAF0', margin: 0 }} />
         <Experience />
-        {/* <Skills /> */}
-        {/* temporarily hidden */}
+        <hr style={{ border: 'none', borderTop: '1px solid #E2EAF0', margin: 0 }} />
         <Projects />
+        <hr style={{ border: 'none', borderTop: '1px solid #E2EAF0', margin: 0 }} />
         <Education />
+        <hr style={{ border: 'none', borderTop: '1px solid #E2EAF0', margin: 0 }} />
         <Contact />
-        {/* <Hobbies /> */}
       </main>
       <Footer />
     </>
