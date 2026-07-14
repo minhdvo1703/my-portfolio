@@ -5,7 +5,7 @@ const TECH_BADGES = [
 ]
 
 export default function Hero() {
-  const ref = useScrollReveal(0.05) // lower threshold — hero is full-height
+  const ref = useScrollReveal(0.05)
 
   return (
     <section id="hero" ref={ref}
@@ -16,19 +16,23 @@ export default function Hero() {
         {/* Two-column layout */}
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
 
-          {/* LEFT column — no delay */}
+          {/* LEFT column */}
           <div className="fade-up flex-1 md:basis-3/5 space-y-6">
             <p className="font-sans text-[13px] font-semibold text-accent uppercase tracking-[0.1em]">
               Data Science · Analytics · Business Intelligence
             </p>
 
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-text-base"
-              style={{ lineHeight: '1', letterSpacing: '-0.02em' }}>
+            <h1 className="font-serif text-text-base"
+              style={{
+                fontSize: 'clamp(2.75rem, calc(1.5rem + 5vw), 5.5rem)',
+                lineHeight: '1.05',
+                letterSpacing: '-0.02em',
+              }}>
               Turning data into decisions.
             </h1>
 
-            <p className="font-sans text-[17px] text-text-muted"
-              style={{ lineHeight: '1.3' }}>
+            <p className="font-sans text-text-muted text-[17px] md:text-[19px]"
+              style={{ lineHeight: '1.7', maxWidth: '68ch' }}>
               Hi, I'm Minh — you can call me Claire. I'm a data scientist and analytics
               professional from Vietnam, based in Houston, TX. I build pipelines, models,
               and dashboards that help teams move faster and decide smarter.
@@ -54,7 +58,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT column — 150ms delay */}
+          {/* RIGHT column */}
           <div className="fade-up md:basis-2/5 flex justify-center md:justify-end"
             style={{ transitionDelay: '150ms' }}>
             <img
