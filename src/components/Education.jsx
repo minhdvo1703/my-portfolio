@@ -5,6 +5,7 @@ const SCHOOLS = [
     id: 1,
     name: 'University of Chicago',
     degree: 'M.S. in Applied Data Science',
+    gpa: 'GPA: 3.8 / 4.0',
     period: '2023 – 2024',
     accent: 'bg-accent/20',
     coursework: [
@@ -16,6 +17,7 @@ const SCHOOLS = [
     id: 2,
     name: 'University of South Florida',
     degree: 'B.S. in Business Analytics and Information Systems',
+    gpa: 'GPA: 3.8 / 4.0',
     period: '2019 – 2022',
     accent: 'bg-accent/15',
     coursework: [
@@ -42,6 +44,7 @@ function EduCard({ school, delay }) {
           <p className="font-serif text-sm text-text-base" style={{ fontStyle: 'normal' }}>
             {school.degree}
           </p>
+          <p className="font-sans text-[13px] text-text-muted">{school.gpa}</p>
           <p className="font-sans text-[13px] text-text-muted">{school.period}</p>
           <div className="pt-3 flex flex-wrap gap-1.5">
             {school.coursework.map(c => (
@@ -65,9 +68,6 @@ export default function Education() {
     <section id="education" className="py-24" ref={ref} style={{ background: '#FAFCFF' }}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <p className="font-sans text-[12px] font-semibold text-accent uppercase tracking-[0.1em] mb-2">
-          Background
-        </p>
         <h2 className="font-sans text-3xl md:text-4xl font-bold text-text-base mb-12"
           style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Education

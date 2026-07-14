@@ -44,7 +44,8 @@ export default function Hero() {
                   rounded-full px-[26px] py-[11px] transition-colors duration-200">
                 View Projects
               </a>
-              <a href="#"
+              <a href="/my-portfolio/assets/Minh_Vo_resume_BIA.pdf"
+                target="_blank" rel="noopener noreferrer"
                 className="font-sans text-sm font-semibold text-accent border border-[1.5px] border-accent
                   rounded-full px-[26px] py-[11px] bg-transparent hover:bg-accent-light
                   transition-colors duration-200">
