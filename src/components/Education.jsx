@@ -68,7 +68,7 @@ export default function Education() {
     <section id="education" className="py-24" ref={ref} style={{ background: '#FAFCFF' }}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="font-sans text-6xl md:text-7xl font-bold text-text-base mb-12"
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-text-base mb-12"
           style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Education
         </h2>

@@ -8,7 +8,7 @@ export default function Experience() {
     <section id="experience" className="py-24 bg-bg-base" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="font-sans text-6xl md:text-7xl font-bold text-text-base mb-12"
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-text-base mb-12"
           style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Experience
         </h2>
