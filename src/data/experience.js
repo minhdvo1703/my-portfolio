@@ -11,10 +11,10 @@ export const experience = [
     ]
   },
   {
-    company: "New York Life Insurance",
+    company: "New York Life Insurance Company",
     role: "Data Science Analyst Intern",
     period: "Jun 2023 – Aug 2023",
-    location: "Remote",
+    location: "Tampa, FL",
     highlights: [
       "Engineered and selected from 2,000+ financial and demographic features using SQL and R to identify key drivers of AARP non-member insurance application success.",
       "Collaborated with Marketing stakeholders to translate analytical findings into targeted campaign recommendations."
