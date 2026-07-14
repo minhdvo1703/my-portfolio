@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-sans:  'Rethink Sans', sans-serif;
-  --font-serif: 'Hedvig Letters Serif', serif;
+  --font-sans:  'Inter', system-ui, sans-serif;
+  --font-serif: 'Manrope', system-ui, sans-serif;
   --hero-gradient: radial-gradient(ellipse at 65% 40%, #B8DDEF 0%, #DAEEF8 45%, #FAFCFF 75%);
 }
 
@@ -16,10 +16,16 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.7;
   background-color: #FAFCFF;
   color: #0F172A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 767px) {
+  body { font-size: 16px; }
 }
 
 /* ── Scroll fade-in-up animation ─────────────────────────────────────── */

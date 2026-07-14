@@ -10,14 +10,18 @@ export default function Contact() {
       <div className="max-w-2xl mx-auto px-6">
 
         <h2
-          className="fade-up font-serif text-text-base"
-          style={{ fontSize: '40px', lineHeight: '1', letterSpacing: '-0.02em' }}>
+          className="fade-up font-serif font-bold text-text-base"
+          style={{
+            fontSize: 'clamp(2rem, calc(1.25rem + 2.5vw), 3rem)',
+            lineHeight: '1.1',
+            letterSpacing: '-0.02em',
+          }}>
           Let's talk
         </h2>
 
         <p
-          className="fade-up font-sans text-text-muted mt-3"
-          style={{ fontSize: '16px', lineHeight: '1.3', transitionDelay: '80ms' }}>
+          className="fade-up font-sans text-text-muted mt-4"
+          style={{ fontSize: '17px', lineHeight: '1.7', transitionDelay: '80ms' }}>
           Open to analytics, BI, and data science opportunities.
         </p>
 
