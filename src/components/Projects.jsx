@@ -4,13 +4,12 @@ import useScrollReveal from '../hooks/useScrollReveal'
 
 function ProjectCard({ project, delay }) {
   return (
-    // fade-up wrapper keeps the card's own transition-all isolated
     <div className="fade-up" style={{ transitionDelay: `${delay}ms` }}>
-      <div className="bg-surface border border-border-subtle rounded-xl p-6 flex flex-col gap-4 h-full
+      {/* gap-4 → gap-3: tighter between related card elements */}
+      <div className="bg-surface border border-border-subtle rounded-xl p-6 flex flex-col gap-3 h-full
         hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(77,168,218,0.15)]
         transition-[transform,box-shadow] duration-200 cursor-default">
 
-        {/* Gradient header strip */}
         <div
           className="h-4 -mx-6 -mt-6 rounded-t-xl"
           style={{ background: project.accentGradient }}
@@ -34,7 +33,7 @@ function ProjectCard({ project, delay }) {
           ))}
         </div>
 
-        <div className="flex gap-4 pt-1">
+        <div className="flex gap-4">
           <a href={project.github} target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-1.5 font-sans text-sm font-medium text-accent hover:text-accent-dark transition-colors duration-200">
             <FaGithub size={14} /> GitHub
@@ -53,15 +52,17 @@ export default function Projects() {
   const ref = useScrollReveal()
 
   return (
-    <section id="projects" className="py-24 bg-bg-base" ref={ref}>
+    /* py-24 → py-16 */
+    <section id="projects" className="py-16 bg-bg-base" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-text-base mb-12"
+        {/* mb-12 → mb-8 */}
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-text-base mb-8"
           style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Projects
         </h2>
 
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-5">
           {projects.map((p, i) => (
             <ProjectCard key={p.id} project={p} delay={i * 80} />
           ))}

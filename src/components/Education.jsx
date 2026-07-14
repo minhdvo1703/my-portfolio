@@ -29,7 +29,6 @@ const SCHOOLS = [
 
 function EduCard({ school, delay }) {
   return (
-    // fade-up wrapper isolates card's own transition-all
     <div className="fade-up" style={{ transitionDelay: `${delay}ms` }}>
       <div className="bg-surface border border-border-subtle rounded-xl overflow-hidden h-full
         hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(77,168,218,0.15)]
@@ -37,7 +36,8 @@ function EduCard({ school, delay }) {
 
         <div className={`h-4 w-full ${school.accent}`} />
 
-        <div className="p-6 space-y-2">
+        {/* space-y-2 → space-y-2.5 inside card */}
+        <div className="p-6 space-y-2.5">
           <h3 className="font-sans text-lg font-semibold text-text-base" style={{ lineHeight: '1.2' }}>
             {school.name}
           </h3>
@@ -46,7 +46,8 @@ function EduCard({ school, delay }) {
           </p>
           <p className="font-sans text-[13px] text-text-muted">{school.gpa}</p>
           <p className="font-sans text-[13px] text-text-muted">{school.period}</p>
-          <div className="pt-3 flex flex-wrap gap-1.5">
+          {/* pt-3 → pt-2 */}
+          <div className="pt-2 flex flex-wrap gap-1.5">
             {school.coursework.map(c => (
               <span key={c}
                 className="font-sans text-[11px] font-medium text-accent-dark bg-accent-light
@@ -65,10 +66,12 @@ export default function Education() {
   const ref = useScrollReveal()
 
   return (
-    <section id="education" className="py-24" ref={ref} style={{ background: '#FAFCFF' }}>
+    /* py-24 → py-16 */
+    <section id="education" className="py-16" ref={ref} style={{ background: '#FAFCFF' }}>
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-text-base mb-12"
+        {/* mb-12 → mb-8 */}
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-text-base mb-8"
           style={{ lineHeight: '1.2', letterSpacing: '-0.01em' }}>
           Education
         </h2>
