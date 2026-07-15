@@ -40,7 +40,7 @@ function EduCard({ school, delay }) {
           <h3 className="font-sans text-lg font-semibold text-text-base" style={{ lineHeight: '1.2' }}>
             {school.name}
           </h3>
-          <p className="font-serif text-[16px] text-text-base mb-0" style={{ fontStyle: 'normal' }}>
+          <p className="font-sans text-[15px] text-text-muted mb-0">
             {school.degree}
           </p>
           <p className="font-sans text-[15px] text-text-muted mb-0">{school.gpa}</p>

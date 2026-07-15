@@ -12,14 +12,15 @@ export default function Contact() {
         <h2
           className="fade-up font-serif text-text-base"
           style={{ fontSize: '40px', lineHeight: '1.1', letterSpacing: '-0.02em' }}>
-          Let's talk
+          Let's stay connected
         </h2>
 
-        {/* mt-3 → mt-4 */}
         <p
           className="fade-up font-sans text-text-muted mt-4"
           style={{ fontSize: '18px', lineHeight: '1.7', transitionDelay: '80ms' }}>
-          Open to analytics, BI, and data science opportunities.
+          Whether it's a new opportunity in BI or finance analytics, a shared passion for data,
+          or simply a coffee chat — I'm always excited to meet new people and explore what we
+          can build together.
         </p>
 
         {/* mt-8 → mt-6 */}
