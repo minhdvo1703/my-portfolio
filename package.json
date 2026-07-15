@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap --source dist --destination dist --skip-third-party-requests"
   },
   "dependencies": {
     "autoprefixer": "^10.5.2",
