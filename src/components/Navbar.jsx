@@ -1,40 +1,15 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const NAV_LINKS = [
-  { label: 'About',      href: '#hero' },
-  { label: 'Experience', href: '#experience' },
-  // { label: 'Skills',     href: '#skills' },  // temporarily hidden
-  { label: 'Projects',   href: '#projects' },
-  { label: 'Education',  href: '#education' },
-  { label: 'Contact',   href: '#contact' },
-  // { label: 'Hobbies', href: '#hobbies' },  // temporarily hidden
+  { label: 'About',      to: '/about' },
+  { label: 'Projects',   to: '/projects' },
+  { label: 'Experience', to: '/experience' },
 ]
 
 export default function Navbar() {
-  const [active, setActive] = useState('hero')
   const [menuOpen, setMenu] = useState(false)
-
-  useEffect(() => {
-    const sectionIds = ['hero', 'experience', 'projects', 'education', 'contact']
-    const observers = sectionIds.map(id => {
-      const el = document.getElementById(id)
-      if (!el) return null
-      const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActive(id) },
-        { rootMargin: '-50% 0px -45% 0px' }
-      )
-      obs.observe(el)
-      return obs
-    })
-    return () => observers.forEach(o => o?.disconnect())
-  }, [])
-
-  const handleLink = (e, href) => {
-    e.preventDefault()
-    setMenu(false)
-    const target = document.querySelector(href)
-    target?.scrollIntoView({ behavior: 'smooth' })
-  }
+  const { pathname } = useLocation()
 
   return (
     <>
@@ -43,30 +18,35 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
 
           {/* Brand */}
-          <a href="#hero"
-            onClick={e => handleLink(e, '#hero')}
+          <Link to="/"
             className="font-sans font-semibold text-text-base text-base tracking-tight hover:text-accent transition-colors duration-200">
             Minh Vo
-          </a>
+          </Link>
 
           {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-6 list-none m-0 p-0">
-            {NAV_LINKS.map(({ label, href }) => {
-              const id = href.replace('#', '')
-              const isActive = active === id
+            {NAV_LINKS.map(({ label, to }) => {
+              const isActive = pathname === to
               return (
                 <li key={label}>
-                  <a href={href}
-                    onClick={e => handleLink(e, href)}
+                  <Link to={to}
                     className={`font-sans text-sm font-medium transition-colors duration-200 pb-0.5 border-b-2
                       ${isActive
                         ? 'text-accent border-accent'
                         : 'text-text-base border-transparent hover:text-accent'}`}>
                     {label}
-                  </a>
+                  </Link>
                 </li>
               )
             })}
+            <li>
+              <a href="/my-portfolio/assets/Minh_Vo_resume_BIA.pdf"
+                target="_blank" rel="noopener noreferrer"
+                className="font-sans text-sm font-medium text-text-base border-b-2 border-transparent
+                  hover:text-accent transition-colors duration-200">
+                Resume
+              </a>
+            </li>
           </ul>
 
           {/* Hamburger */}
@@ -85,13 +65,19 @@ export default function Navbar() {
       {/* Mobile overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-bg-base flex flex-col items-center justify-center gap-8 md:hidden">
-          {NAV_LINKS.map(({ label, href }) => (
-            <a key={label} href={href}
-              onClick={e => handleLink(e, href)}
+          {NAV_LINKS.map(({ label, to }) => (
+            <Link key={label} to={to}
+              onClick={() => setMenu(false)}
               className="font-sans text-2xl font-semibold text-text-base hover:text-accent transition-colors duration-200">
               {label}
-            </a>
+            </Link>
           ))}
+          <a href="/my-portfolio/assets/Minh_Vo_resume_BIA.pdf"
+            target="_blank" rel="noopener noreferrer"
+            onClick={() => setMenu(false)}
+            className="font-sans text-2xl font-semibold text-text-base hover:text-accent transition-colors duration-200">
+            Resume
+          </a>
         </div>
       )}
     </>

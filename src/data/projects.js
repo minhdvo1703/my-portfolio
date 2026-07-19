@@ -3,6 +3,7 @@
 const projects = [
   {
     id: 1,
+    featured: true,
     title: 'Divvy Bike Sharing Systems Analysis',
     description:
       "Designed a relational schema and built an ETL pipeline into BigQuery to analyze Chicago's Divvy ridership — evaluating rider behavior, station performance, and the impact of weather and precipitation on usage.",
@@ -13,6 +14,7 @@ const projects = [
   },
   {
     id: 2,
+    featured: true,
     title: 'Navigating AI Revolution — NLP Analysis',
     description:
       "Led NLP analysis of a 200K-article corpus to map AI's impact across industries. Applied BERTopic, sentiment analysis, and topic modeling to surface automation trends and workforce implications.",
@@ -33,6 +35,7 @@ const projects = [
   },
   {
     id: 4,
+    featured: true,
     title: 'Health Insurance Claim Prediction',
     description:
       'Developed and fine-tuned predictive models to estimate insurance claim amounts from health factors including BMI, diabetes status, and smoking. Identified the best-performing model through rigorous comparison.',
