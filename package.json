@@ -19,6 +19,7 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-icons": "^5.7.0",
+    "react-router-dom": "^7.18.1",
     "tailwindcss": "^3.4.19"
   },
   "reactSnap": {
@@ -26,9 +27,14 @@
     "destination": "dist",
     "publicPath": "/my-portfolio/",
     "puppeteerExecutablePath": "/opt/pw-browsers/chromium-1194/chrome-linux/chrome",
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "crawl": false,
-    "include": ["/"]
+    "include": [
+      "/"
+    ]
   },
   "devDependencies": {
     "@types/react": "^19.2.17",

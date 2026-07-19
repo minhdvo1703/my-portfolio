@@ -1,29 +1,24 @@
-import Navbar     from './components/Navbar'
-import Hero       from './components/Hero'
-import Experience from './components/Experience'
-import Skills     from './components/Skills'
-import Projects   from './components/Projects'
-import Education  from './components/Education'
-import Contact    from './components/Contact'
-// import Hobbies from './components/Hobbies'
-import Footer     from './components/Footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+import ProjectsPage from './pages/ProjectsPage'
+import ExperiencePage from './pages/ExperiencePage'
 
-export default function App() {
+function App() {
   return (
-    <>
+    <BrowserRouter basename="/my-portfolio/">
       <Navbar />
-      <main>
-        <Hero />
-        <hr style={{ border: 'none', borderTop: '1px solid #E2EAF0', margin: 0 }} />
-        <Experience />
-        <hr style={{ border: 'none', borderTop: '1px solid #E2EAF0', margin: 0 }} />
-        <Projects />
-        <hr style={{ border: 'none', borderTop: '1px solid #E2EAF0', margin: 0 }} />
-        <Education />
-        <hr style={{ border: 'none', borderTop: '1px solid #E2EAF0', margin: 0 }} />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
+
+export default App
